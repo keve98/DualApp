@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:f="http://java.sun.com/jsf/core"
+       xmlns:h="http://java.sun.com/jsf/html"
+      xml:lang="en" lang="en">
+
+<body>
+    <f:metadata>
+        <f:viewParam name="invoiceid" value="#{invoicesController.id}"/>
+    </f:metadata>
+
+    <p>The invoice you have selected: ${invoicesController.name} ${invoicesController.d_date} ${invoicesController.i_date} ${invoicesController.comment}</p>
+
+    <h:dataTable value="#{getInvoiceDetails}" var ="item">
+        <h:column>
+            <f:facet name="header">Product name</f:facet>
+            ${item.productName}
+        </h:column>
+
+        <h:column>
+            <f:facet name="header">Unit price</f:facet>
+            ${item.unitPrice}
+        </h:column>
+
+        <h:column>
+            <f:facet name="header">Quantity</f:facet>
+            ${item.quantity}
+        </h:column>
+
+        <h:column>
+            <f:facet name="header">HUF</f:facet>
+        </h:column>
+
+        <h:column>
+            <f:facet name="header">EUR</f:facet>
+        </h:column>
+
+    </h:dataTable>
+    <input type="button" value="Back" onclick="history.back()"/>
+</body>
+</html>

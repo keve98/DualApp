@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html" xmlns:f="http://java.sun.com/jsf/core"
+      xml:lang="en" lang="en">
+
+
+<p>Invoices:
+    <a href="details.xhtml">Test</a>
+</p>
+
+    <h:dataTable value="#{invoices}" var="invoice">
+        <h:column>
+            <f:facet name="header">Customer Name</f:facet>
+            <h:link value="#{invoice.customerName}" outcome="details">
+                <f:param name = "invoiceid" value="#{invoice.id}"/>
+            </h:link>
+        </h:column>
+
+        <h:column>
+            <f:facet name="header">Due Date</f:facet>
+            ${invoice.dueDate}
+        </h:column>
+
+        <h:column>
+            <f:facet name="header">Issue Date</f:facet>
+            ${invoice.issueDate}
+        </h:column>
+
+        <h:column>
+            <f:facet name="header">Comment</f:facet>
+            ${invoice.comment}
+        </h:column>
+    </h:dataTable>
+
+
+</html>
