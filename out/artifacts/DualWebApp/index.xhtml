@@ -8,7 +8,7 @@
 
 
 <p>Invoices:
-    <a href="details.xhtml">Test</a>
+    <a href="details.xhtml">Go to details</a>
 </p>
 
     <h:dataTable value="#{invoices}" var="invoice">
@@ -18,7 +18,6 @@
                 <f:param name = "invoiceid" value="#{invoice.id}"/>
             </h:link>
         </h:column>
-
         <h:column>
             <f:facet name="header">Due Date</f:facet>
             ${invoice.dueDate}

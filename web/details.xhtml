@@ -11,7 +11,7 @@
         <f:viewParam name="invoiceid" value="#{invoicesController.id}"/>
     </f:metadata>
 
-    <p>The invoice you have selected: ${invoicesController.name} ${invoicesController.d_date} ${invoicesController.i_date} ${invoicesController.comment}</p>
+    <p>Selected invoice: ${invoicesController.name} ${invoicesController.d_date} ${invoicesController.i_date} ${invoicesController.comment}</p>
 
     <h:dataTable value="#{getInvoiceDetails}" var ="item">
         <h:column>
