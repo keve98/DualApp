@@ -23,7 +23,6 @@ public class InvoicesController {
     private String comment;
 
 
-
     @Named
     @Produces
     public List<Invoice> getInvoices(){

@@ -28,5 +28,4 @@ public class InvoiceItem implements Serializable {
     public String getProductName(){return productName;}
     public Integer getUnitPrice() {return unitPrice;}
     public Integer getQuantity() {return quantity;}
-
 }

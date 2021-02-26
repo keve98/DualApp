@@ -28,7 +28,6 @@ public class Invoice implements Serializable {
     private Integer invoiceTotal;
 
 
-
     public Integer getId(){
         return invoiceID;
     }

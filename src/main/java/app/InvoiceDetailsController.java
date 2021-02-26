@@ -22,5 +22,4 @@ public class InvoiceDetailsController {
         return query.getResultList();
     }
 
-
 }
